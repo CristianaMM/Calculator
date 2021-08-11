@@ -1,0 +1,20 @@
+.calculator {
+  margin: 0 200px;
+}
+.calculator__buttons {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+.calculator__buttons div {
+  background-color: pink;
+  text-align: center;
+}
+.calculator__screen {
+  margin-bottom: 10px;
+  height: 20vh;
+  background-color: cornsilk;
+  text-align: end;
+}
