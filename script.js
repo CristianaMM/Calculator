@@ -31,7 +31,7 @@ const compute = () => {
       break;
   }
 
-  currentValue = total.toString();
+  currentValue = total ? total.toString() : currentValue;
   operation = undefined;
   firstValue = "";
 };
@@ -52,7 +52,9 @@ const handleClickDelete = () => {
   currentValue = "";
   firstValue = "";
   operation = undefined;
-  updateScreenDisplay();
+
+  screenCurrentValue.innerHTML = "";
+  screenPrevious.innerHTML = "";
 };
 
 const handleClickOperation = (event) => {
