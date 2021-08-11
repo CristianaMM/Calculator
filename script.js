@@ -2,6 +2,7 @@ const screen = document.getElementsByClassName("calculator__screen")[0];
 let currentValue = "";
 let firstValue = "";
 let operation = undefined;
+let isFinalOperation = false;
 
 const compute = () => {
   let total;
@@ -59,6 +60,10 @@ const handleClickOperation = (event) => {
 
 const handleClickNumber = (event) => {
   const value = getValue(event);
+  if (isFinalOperation) {
+    currentValue = "";
+    isFinalOperation = false;
+  }
   if (value != "." || !currentValue.includes(".")) {
     currentValue =
       currentValue == "0" ? value : currentValue.toString() + value.toString();
@@ -107,6 +112,7 @@ const handleClickPercentage = (event) => {
 };
 
 const handleClickEquals = () => {
+  isFinalOperation = true;
   compute();
   updateScreenDisplay();
 };
