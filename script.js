@@ -1,4 +1,9 @@
-const screen = document.getElementsByClassName("calculator__screen")[0];
+const screenPrevious = document.getElementsByClassName(
+  "calculator__screen--value"
+)[0];
+const screenCurrentValue = document.getElementsByClassName(
+  "calculator__screen--value"
+)[1];
 let currentValue = "";
 let firstValue = "";
 let operation = undefined;
@@ -32,7 +37,11 @@ const compute = () => {
 };
 
 const updateScreenDisplay = () => {
-  screen.innerHTML = currentValue;
+  screenCurrentValue.innerHTML = currentValue;
+
+  if (operation) {
+    screenPrevious.innerHTML = firstValue.toString() + " " + operation;
+  }
 };
 
 const getValue = (event) => {

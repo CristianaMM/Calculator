@@ -14,28 +14,30 @@
     <main>
         <section class="calculator">
             <div class="calculator__screen">
-                <p></p>
+                <p class="calculator__screen--value prev"></p>
+                <p class="calculator__screen--value current"></p>
             </div>
             <div class="calculator__buttons">
-                <div class="button" onClick="handleClickDelete()">AC</div>
-                <div class="button" onClick="handleChangesignal(event)">-/+</div>
-                <div class="button" onClick="handleClickPercentage(event)">%</div>
-                <div class="button" onClick="handleClickOperation(event)">/</div>
-                <div class="button" onClick="handleClickNumber(event)">7</div>
-                <div class="button" onClick="handleClickNumber(event)">8</div>
-                <div class="button" onClick="handleClickNumber(event)">9</div>
-                <div class="button" onClick="handleClickOperation(event)">x</div>
-                <div class="button" onClick="handleClickNumber(event)">4</div>
-                <div class="button" onClick="handleClickNumber(event)">5</div>
-                <div class="button" onClick="handleClickNumber(event)">6</div>
-                <div class="button" onClick="handleClickOperation(event)">-</div>
-                <div class="button" onClick="handleClickNumber(event)">1</div>
-                <div class="button" onClick="handleClickNumber(event)">2</div>
-                <div class="button" onClick="handleClickNumber(event)">3</div>
-                <div class="button" onClick="handleClickOperation(event)">+</div>
-                <div class="button" onClick="handleClickNumber(event)">0</div>
-                <div class="button" onClick="handleClickNumber(event)">.</div>
-                <div class="button" onClick="handleClickEquals(event)">=</div>
+                <div class="calculator__buttons--symbol" onClick="handleClickDelete()">AC</div>
+                <div class="calculator__buttons--symbol" onClick="handleChangesignal(event)">C</div>
+                <div class="calculator__buttons--symbol" onClick="handleClickPercentage(event)">%</div>
+                <div class="calculator__buttons--symbol" onClick="handleClickOperation(event)">/</div>
+                <div class="calculator__buttons--number" onClick="handleClickNumber(event)">7</div>
+                <div class="calculator__buttons--number" onClick="handleClickNumber(event)">8</div>
+                <div class="calculator__buttons--number" onClick="handleClickNumber(event)">9</div>
+                <div class="calculator__buttons--symbol" onClick="handleClickOperation(event)">x</div>
+                <div class="calculator__buttons--number" onClick="handleClickNumber(event)">4</div>
+                <div class="calculator__buttons--number" onClick="handleClickNumber(event)">5</div>
+                <div class="calculator__buttons--number" onClick="handleClickNumber(event)">6</div>
+                <div class="calculator__buttons--symbol" onClick="handleClickOperation(event)">-</div>
+                <div class="calculator__buttons--number" onClick="handleClickNumber(event)">1</div>
+                <div class="calculator__buttons--number" onClick="handleClickNumber(event)">2</div>
+                <div class="calculator__buttons--number" onClick="handleClickNumber(event)">3</div>
+                <div class="calculator__buttons--symbol" onClick="handleClickOperation(event)">+</div>
+                <div class="calculator__buttons--number" onClick="handleChangesignal(event)">-/+</div>
+                <div class="calculator__buttons--number" onClick="handleClickNumber(event)">0</div>
+                <div class="calculator__buttons--number" onClick="handleClickNumber(event)">.</div>
+                <div class="calculator__buttons--symbol" onClick="handleClickEquals(event)">=</div>
             </div>
         </section>
     </main>
