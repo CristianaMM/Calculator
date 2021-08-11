@@ -26,7 +26,7 @@ const compute = () => {
     case "x":
       total = firstNumber * secondNumber;
       break;
-    case "/":
+    case "÷":
       total = firstNumber / secondNumber;
       break;
   }
@@ -45,7 +45,7 @@ const updateScreenDisplay = () => {
 };
 
 const getValue = (event) => {
-  return event.target.innerText;
+  return event.target.children[0].innerText;
 };
 
 const handleClickDelete = () => {
@@ -109,7 +109,7 @@ const handleClickPercentage = (event) => {
       case "x":
         total = firstNumber * (secondNumber / 100);
         break;
-      case "/":
+      case "÷":
         total = firstNumber / (secondNumber / 100);
         break;
     }

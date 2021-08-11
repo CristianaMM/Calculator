@@ -38,6 +38,9 @@
   gap: 10px;
 }
 .calculator__buttons--symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: black;
   color: white;
   text-align: center;
@@ -45,6 +48,9 @@
   box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2), -12px -12px 24px 0 rgba(255, 255, 255, 0.5);
 }
 .calculator__buttons--number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: F2F3F7;
   color: black;
   text-align: center;
