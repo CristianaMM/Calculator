@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
+
+$font-body : 'Atkinson Hyperlegible', sans-serif;
+$color-black: black;
+$color-white1: #F2F3F7;
+$color-white2: #f5f5f5;
+$color-grey: #484848;
+
 * {
     padding: 0;
     margin: 0;
+    font-family: $font-body;
 }
+
 
 .calculator {
     width: 100%;
     max-width: 300px;
     margin: 0 auto;
-    background-color: #f5f5f5;
-    border: 1px solid #484848;
+    background-color: $color-white2;
+    border: 1px solid $color-grey;
     border-radius: 20px;
 
     &__screen {
@@ -18,7 +28,7 @@
         justify-content: flex-end;
         margin: 50px 20px 25px;
         height: 150px;
-        background-color: #F2F3F7;
+        background-color: $color-white1;
         border-radius: 15px;
         box-shadow: inset 5px 5px 10px 0 rgba(0, 0, 0, 0.2),
             inset -5px -5px 10px 0 rgba(255, 255, 255, 0.5);
@@ -30,7 +40,8 @@
         }
 
         .prev {
-            font: 20px;
+            font-size: 20px;
+            color: $color-grey;
         }
 
         .current {
@@ -56,7 +67,7 @@
             align-items: center;
             justify-content: center;
             background-color: black;
-            color: white;
+            color: $color-white1;
             text-align: center;
             border-radius: 15px;
             box-shadow: 12px 12px 16px -12px rgba(255, 255, 255, 0.3) inset,
@@ -67,7 +78,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #F2F3F7;
+            background-color: $color-white1;
             color: black;
             text-align: center;
             border-radius: 15px;

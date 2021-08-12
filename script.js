@@ -37,10 +37,18 @@ const compute = () => {
 };
 
 const updateScreenDisplay = () => {
-  screenCurrentValue.innerHTML = currentValue;
+  const displayCurrentNumber =
+    currentValue.length > 9
+      ? Number(currentValue).toExponential(4)
+      : Number(currentValue);
+  const displayPrevNumber =
+    firstValue.toString().length > 9
+      ? Number(firstValue).toExponential(4)
+      : Number(firstValue);
+  screenCurrentValue.innerHTML = displayCurrentNumber;
 
   if (operation) {
-    screenPrevious.innerHTML = firstValue.toString() + " " + operation;
+    screenPrevious.innerHTML = displayPrevNumber.toString() + " " + operation;
   }
 };
 
@@ -75,7 +83,10 @@ const handleClickNumber = (event) => {
     currentValue = "";
     isFinalOperation = false;
   }
-  if (value != "." || !currentValue.includes(".")) {
+  if (
+    currentValue.length < 9 &&
+    (value != "." || !currentValue.includes("."))
+  ) {
     currentValue =
       currentValue == "0" ? value : currentValue.toString() + value.toString();
   }
