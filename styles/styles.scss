@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap');
 
 $font-body : 'Atkinson Hyperlegible', sans-serif;
+
 $color-black: black;
 $color-white1: #F2F3F7;
 $color-white2: #f5f5f5;
 $color-grey: #484848;
+
+$small: 576px;
 
 * {
     padding: 0;
@@ -12,14 +15,23 @@ $color-grey: #484848;
     font-family: $font-body;
 }
 
-
+body {
+    background-color: #84b7aca3
+}
 .calculator {
+    padding: 75px 0 50px;
     width: 100%;
-    max-width: 300px;
+    max-width: $small;
     margin: 0 auto;
     background-color: $color-white2;
-    border: 1px solid $color-grey;
     border-radius: 20px;
+    box-shadow: 6px 6px 14px 0 rgba(0, 0, 0, 0.2),
+    -8px -8px 18px 0 rgba(255, 255, 255, 0.55);
+
+
+    @media screen and (min-width: $small){
+        margin-top: 100px;
+    }
 
     &__screen {
         display: flex;

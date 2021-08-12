@@ -10,7 +10,7 @@ let operation = undefined;
 let isFinalOperation = false;
 
 const compute = () => {
-  let total;
+  let total = null;
   const firstNumber = Number(firstValue);
   const secondNumber = Number(currentValue);
   if (isNaN(firstNumber) || isNaN(secondNumber)) {
@@ -31,7 +31,7 @@ const compute = () => {
       break;
   }
 
-  currentValue = total ? total.toString() : currentValue;
+  currentValue = total != null ? total.toString() : currentValue;
   operation = undefined;
   firstValue = "";
 };
@@ -96,6 +96,7 @@ const handleClickNumber = (event) => {
   }
   updateScreenDisplay();
 };
+
 const handleChangesignal = () => {
   if (currentValue != "0") {
     currentValue =
