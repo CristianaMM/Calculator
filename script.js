@@ -37,14 +37,13 @@ const compute = () => {
 };
 
 const updateScreenDisplay = () => {
-  const displayCurrentNumber =
+  let displayCurrentNumber =
     currentValue.length > 9
       ? Number(currentValue).toExponential(4)
-      : Number(currentValue);
-  const displayPrevNumber =
-    firstValue.toString().length > 9
-      ? Number(firstValue).toExponential(4)
-      : Number(firstValue);
+      : currentValue;
+  let displayPrevNumber =
+    firstValue.length > 9 ? Number(firstValue).toExponential(4) : firstValue;
+
   screenCurrentValue.innerHTML = displayCurrentNumber;
 
   if (operation) {
@@ -56,13 +55,18 @@ const getValue = (event) => {
   return event.target.children[0].innerText;
 };
 
-const handleClickDelete = () => {
+const handleClickDeleteAll = () => {
   currentValue = "";
   firstValue = "";
   operation = undefined;
 
   screenCurrentValue.innerHTML = "";
   screenPrevious.innerHTML = "";
+};
+
+const handleClickDelete = () => {
+  currentValue = currentValue.substring(0, currentValue.length - 1);
+  updateScreenDisplay();
 };
 
 const handleClickOperation = (event) => {
